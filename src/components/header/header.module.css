@@ -1,0 +1,22 @@
+.mainHeaderBlock {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentSection {
+  display: flex;
+  width: 95%;
+  align-items: center;
+  gap: 4rem;
+}
+
+.iconBlock {
+  display: flex;
+}
+
+.mainSearchBlock {
+  display: flex;
+  width: 100%;
+}

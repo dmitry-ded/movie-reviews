@@ -1,0 +1,83 @@
+.mainFooter {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  padding-top: 1rem;
+}
+
+.footerBlock {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #c0c0c0;
+}
+
+.footerCredits {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: .8rem;
+
+  p {
+    font-size: 13px;
+  }
+}
+
+.liruAgeLimit {
+  display: flex;
+  gap: .3rem;
+  align-items: center;
+
+  img {
+    width: 88px;
+    height: 15px;
+  }
+  p {
+    border: 1px solid #c0c0c0;
+    font-size: 12px;
+  }
+}
+
+.footerItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  cursor: pointer;
+  transition: color 0.2s, text-decoration 0.2s;
+}
+
+.link:hover {
+  color: #4444c6;
+  text-decoration: underline;
+}
+
+.iosApp {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #e0e0ff;
+
+  img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.iosAppText {
+  color: #4444c6;
+  display: flex;
+  padding: .5rem;
+  gap: 1rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.iosAppText:active {
+  border: 2px solid #4444c6; 
+  border-radius: 10px;      
+}

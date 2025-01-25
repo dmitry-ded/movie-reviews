@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 120 120">
+            <rect width="120" height="110" rx="20" fill="rgba(0, 0, 0)" />
+            
+            <circle cx="60" cy="40" r="25" fill="#cf8ca1" />
+            
+            <circle cx="60" cy="40" r="20" fill="#d22951" />
+            
+            <polygon points="60,20 64,35 80,35 67,45 72,60 60,50 48,60 53,45 40,35 56,35" fill="#ffffff" />
+            
+            <rect x="5" y="70" width="110" height="25" rx="5" fill="#d22951" />
+            
+            <text x="60" y="85" fill="#ffffff" font-size="14" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold">
+              Movie Reviews
+            </text>
+          </svg>

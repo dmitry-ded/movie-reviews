@@ -1,0 +1,125 @@
+.mainFullCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.fullCardBody {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+}
+
+.fullCardMovieAndReviews {
+  display: flex;
+  flex-direction: column;
+}
+.nameMovie {
+  display: flex;
+  padding: 1rem 0 2rem 0;
+}
+
+.fullCardMovie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  width: 40%;
+  height: 350px;
+  border-radius: 10px;
+}
+
+.movieImageAndRating {
+  display: flex;
+  width: 80%;
+  gap: 5rem;
+  height: 250px;
+}
+
+.image {
+  display: flex;
+  padding-top: 1rem;
+}
+
+.img {
+  width: 100px;
+  height: 100px;
+}
+
+.rating {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+}
+
+.buttonBlock {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+}
+
+.button {
+  width: 80%;
+  height: 40px;
+  background-color: #fbebf0;
+  border-radius: 10px;
+}
+
+.button {
+  width: 80%;
+  height: 40px;
+  background-color: #fbebf0;
+  border-radius: 10px;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.button:hover {
+  background-color: #f5d1dc;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.button:active {
+  background-color: #e8b9c5;
+  transform: scale(0.95);
+}
+
+.countReviews {
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+
+.count {
+  margin-left: 5px;
+  background-color: #e8b9c5;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.description {
+  display: flex;
+}
+
+.fullCardReview {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  width: 100%;
+  padding-bottom: 1rem;
+}

@@ -1,0 +1,84 @@
+.reviewCard {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.reviewHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.reviewAvatar img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.reviewUserInfo {
+  flex-grow: 1;
+}
+
+.reviewRating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: right;
+  gap: .5rem;
+}
+
+.ratingBadge {
+  display: flex;
+  background-color: #D22951;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: bold;
+
+  width: 30px;
+  height: 30px;
+}
+
+.reviewDate {
+  font-size: 14px;
+  color: #777;
+}
+
+.reviewBody {
+  display: flex;
+  flex-direction: column;
+  background-color: #e9e9e9;
+  padding: .5rem;
+  border-radius: 10px;
+  position: relative;
+}
+
+.reviewBody::before {
+  content: "";
+  position: absolute;
+  top: -10px; 
+  left: 20px; 
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #e9e9e9;
+}
+
+.reviewTitle {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.reviewBody p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}

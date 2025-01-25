@@ -1,0 +1,8 @@
+.app {
+  display: flex;
+  justify-content: center;
+  font-family: "Nunito", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
