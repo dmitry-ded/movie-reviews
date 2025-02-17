@@ -9,7 +9,7 @@ const popupCategory = [
   {name: "Сериал"},
 ]
 
-const SortByCategory = () => {
+const SortByCategory: React.FC = () => {
 
   const sortRef = useRef<HTMLDivElement>(null);
   const dispatch = useAppDispatch();

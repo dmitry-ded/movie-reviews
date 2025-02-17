@@ -13,7 +13,6 @@ const ReviewsCard: React.FC<reviewCardProps> = ( { review } ) => {
   const [deletePost, {}] = useDeletePostReviewMutation();
 
   const handleDelete = async (post: Reviews) => {
-    console.log(post);
 
     try {
       await deletePost(post)

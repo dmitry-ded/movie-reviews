@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styles from "./sortPopup.module.css"
 import { RootState, useAppDispatch } from '../../redux/store';
 import { setSortType, Sort, SortEnumProperty } from '../../redux/slices/filterSlice';

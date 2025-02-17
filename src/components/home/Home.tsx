@@ -5,9 +5,10 @@ import { useGetFilmsQuery } from '../../services/FilmService'
 import SortPopup from "../sortPopup/SortPopup"
 import { useSelector } from "react-redux"
 import { RootState } from "../../redux/store"
-import { useEffect, useState } from "react"
+import { useState } from "react"
+import { IFilm } from "../../models/IFilm"
 
-const Home = () => {
+const Home: React.FC = () => {
 
   const [page, setPage] = useState(1);
   let limit = 10;
@@ -17,16 +18,16 @@ const Home = () => {
   const category = useSelector((state: RootState) => state.filterSlice.category);
 
   const { data, error, isLoading } = useGetFilmsQuery({page, perPage: limit, searchValue, sortProperty: sortType.sortProperty, category});
-  console.log(data);
 
   const getItemText = (count: number) => {
     let text;
-    if (count === 1) text = "Найден 1 фильм";
-    else if (count === 2) text = "Найдено 2 фильма";
-    else if (count === 3) text = "Найдено 3 фильма";
-    else if (count === 4) text = "Найдено 4 фильма";
-    else if (count > 1 && count < 5) text = `Найдено ${count} фильмов`;
-    else text = `Найдено ${count} фильмов`;
+    if (count === 1) text = "Найден: 1 фильм";
+    else if (count === 2) text = "Найдено: 2 фильма";
+    else if (count === 3) text = "Найдено: 3 фильма";
+    else if (count === 4) text = "Найдено: 4 фильма";
+    else if (count > 1 && count < 5) text = `Найдено: ${count} фильмa`;
+    else if (count === 101) text = `Найдено: ${count} фильм`
+    else text = `Найдено: ${count} фильмов`;
 
     const parts = text.split(/(\d+)/);
 
@@ -69,9 +70,9 @@ const Home = () => {
             <SortPopup/>
           </div>
           { 
-            data && data.films.map((el: any) => (
-              <MovieCard key={el.id} film={el} />
-            ))
+            data && data.films.map((el: IFilm) => {
+              return <MovieCard key={el.id} film={el} />
+            })
           }
         </div>
         <div className={styles.pagination}>

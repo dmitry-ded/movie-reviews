@@ -8,7 +8,7 @@ const FullReviewsMovieCard: React.FC = () => {
 
   const { id } = useParams();
   const numberId = id ? parseInt(id, 10) : 1; 
-  const { data, error, isLoading } = useGetFilmByIdQuery(numberId); 
+  const { data } = useGetFilmByIdQuery(numberId); 
 
   return (
     <section className={styles.mainFullCard}>

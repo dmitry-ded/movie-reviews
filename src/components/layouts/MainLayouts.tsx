@@ -4,7 +4,7 @@ import styles from "../home/home.module.css"
 import Footer from '../footer/Footer'
 
 
-const MainLayouts = () => {
+const MainLayouts: React.FC = () => {
   return (
     <div className={styles.mainHomeBlock}>
       <div className={styles.headerBlock}>

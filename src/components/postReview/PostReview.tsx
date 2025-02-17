@@ -19,7 +19,7 @@ const PostReview: React.FC = () => {
 
   const { id } = useParams();
   const numberId = id ? parseInt(id, 10) : 1;
-  const { data, error, isLoading } = useGetFilmByIdQuery(numberId);
+  const { data, isLoading } = useGetFilmByIdQuery(numberId);
   const [createPost, {}] = useCreatePostReviewMutation();
 
   const [titleReview, setTitleReview] = useState('');
@@ -36,17 +36,17 @@ const PostReview: React.FC = () => {
   const dispatch = useAppDispatch();
   const rating = useSelector((state: RootState) => state.filterSlice.ratingReview);
 
-  const handleInputChangeTitle = (e: any) => {
+  const handleInputChangeTitle = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTitleReview(e.target.value);
   };
-  const handleInputChangeText = (e: any) => {
+  const handleTextareaChangeText = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setCharCount(e.target.value.length);
     setTextReview(e.target.value);
   };
-  const handleInputChangePlus = (e: any) => {
+  const handleTextareaChangePlus = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setPlusReview(e.target.value);
   };
-  const handleInputChangeMinus = (e: any) => {
+  const handleTextareaChangeMinus = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setMinusReview(e.target.value);
   };
   
@@ -82,9 +82,9 @@ const PostReview: React.FC = () => {
       reviewMinus: minusReview,
       personalRating: String(ratingNumber),
     }
+
     await createPost(reviewData);
 
-    console.log(reviewData);
     setTitleReview("");
     setTextReview("");
     setPlusReview("");
@@ -103,9 +103,6 @@ const PostReview: React.FC = () => {
       document.removeEventListener("click", handleClickOutside);
     };
   }, []);
-
-  console.log(rating);
-  
   
   return (
     <div className={styles.mainPostRewiews}>
@@ -171,7 +168,7 @@ const PostReview: React.FC = () => {
             </div>
             <div className={styles.fullReview}>
               <label htmlFor="">
-                <textarea className={styles.textareaB} rows={4} cols={40} value={textReview} onChange={handleInputChangeText} name="" id="" />
+                <textarea className={styles.textareaB} rows={4} cols={40} value={textReview} onChange={handleTextareaChangeText} name="" id="" />
               </label>
               <div style={{ textAlign: "right", fontSize: "smaller", color: "#777", padding: "0 .5rem .5rem 0"}}>
                 Символов: {charCount}
@@ -196,7 +193,7 @@ const PostReview: React.FC = () => {
                   if (words.length > 15) {
                     e.target.value = words.slice(0, 15).join(" ");
                   }
-                  handleInputChangePlus(e)
+                  handleTextareaChangePlus(e)
                 }}
               />
             </label>
@@ -219,7 +216,7 @@ const PostReview: React.FC = () => {
                   if (words.length >= 15) {
                     e.target.value = words.slice(0, 15).join(" ");
                   } 
-                  handleInputChangeMinus(e)
+                  handleTextareaChangeMinus(e)
                 }}
               />
             </label>

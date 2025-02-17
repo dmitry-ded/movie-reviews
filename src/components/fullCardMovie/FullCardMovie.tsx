@@ -3,11 +3,11 @@ import icon from "../../assets/5.jpg"
 import { Link, useParams } from 'react-router-dom';
 import { useGetFilmByIdQuery } from '../../services/FilmService';
 
-const FullCardMovie = () => {
+const FullCardMovie: React.FC = () => {
 
   const { id } = useParams();
   const numberId = id ? parseInt(id, 10) : 1; 
-  const { data, error, isLoading } = useGetFilmByIdQuery(numberId);
+  const { data } = useGetFilmByIdQuery(numberId);
 
   return (
     <div className={styles.fullCardMovie}>

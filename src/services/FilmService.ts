@@ -34,7 +34,7 @@ export const filmsAPI = createApi({
     getFilmById: builder.query<IFilm, number>({
       query: (id) => (`films?id=${id}`),
       transformResponse: (response: IFilm[]) => response[0],
-      providesTags: (result, error, id) => [{ type: "Films", id }],
+      providesTags: (id) => [{ type: "Films", id: id?.toString() || "1" }],
     }),
     createPostReview: builder.mutation<Reviews, Reviews>({
       query: (post) => ({

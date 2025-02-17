@@ -1,14 +1,13 @@
-import React from 'react'
 import styles from "./movieDescription.module.css"
 import { Link, useParams } from 'react-router-dom';
 import { useGetFilmByIdQuery } from '../../services/FilmService';
 import FullCardMovie from '../fullCardMovie/FullCardMovie';
 
-const MovieDescription = () => {
+const MovieDescription: React.FC = () => {
 
   const { id } = useParams();
   const numberId = id ? parseInt(id, 10) : 1; 
-  const { data, error, isLoading } = useGetFilmByIdQuery(numberId);
+  const { data } = useGetFilmByIdQuery(numberId);
 
   return (
     <div className={styles.mainMovieDescription}>
