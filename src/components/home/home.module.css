@@ -1,29 +1,25 @@
-body {
-  font-family: "Faculty Glyphic", serif;
-  font-weight: 400;
-  font-style: normal;
-}
 
 .mainHomeBlock {
   display: flex;
   justify-content: center;
   flex-direction: column;
   width: 95%;
+  min-height: 100vh; /* Гарантирует, что блок будет занимать хотя бы 100% высоты экрана */
 }
 
 .homeBlock {
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* height: 100vh; */
-  background-color: rgba(236, 236, 236, 0.873);
+  flex-grow: 1;
+  background-color: #f5f5f7;
 }
 
 .headerBlock {
   display: flex;
   width: 100%;
   height: 80px;
-  background-color: rgb(244, 244, 244);
+  background-color: #e7e7ef;
   flex-shrink: 0;
 }
 
@@ -32,7 +28,7 @@ body {
   justify-content: center;
   width: 100%;
   height: 200px;
-  background-color: rgb(244, 244, 244);
+  background-color: #e7e7ef;
   flex-shrink: 0;
 }
 
@@ -55,13 +51,21 @@ body {
 .mainMovieSortBlock {
   display: flex;
   width: 100%;
-  padding: .5rem .5rem .5rem 0;
+  padding: 1.5rem 0rem 1.5rem 0;
 }
 
 .movie{
   display: flex;
   flex-direction: column;
   gap: .5rem;
+}
+
+.movieCouAndSort {
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+  color: #575757;
+  font-weight: 500;
 }
 
 .countMovie {
@@ -73,4 +77,75 @@ body {
   flex-grow: 1;
   /* justify-content: center; */
   width: 100%;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  /* gap: .5rem; */
+  padding: 2rem 0 2rem 0;
+  width: 60%;
+}
+
+.countPage {
+  display: flex;
+  gap: .3rem;
+}
+
+.buttonNextPrev {
+  display: flex;
+}
+
+.filmsPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 36px;
+  width: 36px;
+  line-height: 36px;
+  font-size: 16px;
+  font-weight: 550;
+  background-color: transparent;
+  color: #575757;
+}
+
+.filmsPageActive {
+  background-color: #ededf0;
+  color: #000;
+}
+
+.filmsPage:hover {
+  background-color: #ededf0;
+  color: #000;
+}
+
+.lastPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: 36px;
+  width: 36px;
+}
+
+.lastPage:hover {
+  background-color: #ededf0;
+  color: #000;
+}
+
+.buttonBlockPage {
+  display: flex;
+}
+
+.buttonPrev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  padding: 0 .5rem 0 .5rem;
+  color: #575757;
+  font-weight: 550;
 }

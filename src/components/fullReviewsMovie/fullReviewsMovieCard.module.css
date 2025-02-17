@@ -18,74 +18,7 @@
 }
 .nameMovie {
   display: flex;
-  padding: 1rem 0 2rem 0;
-}
-
-.fullCardMovie {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(255, 255, 255);
-  width: 40%;
-  height: 350px;
-  border-radius: 10px;
-}
-
-.movieImageAndRating {
-  display: flex;
-  width: 80%;
-  gap: 5rem;
-  height: 250px;
-}
-
-.image {
-  display: flex;
-  padding-top: 1rem;
-}
-
-.img {
-  width: 100px;
-  height: 100px;
-}
-
-.rating {
-  display: flex;
-  flex-direction: column;
-  padding-top: 1rem;
-}
-
-.buttonBlock {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 50px;
-}
-
-.button {
-  width: 80%;
-  height: 40px;
-  background-color: #fbebf0;
-  border-radius: 10px;
-}
-
-.button {
-  width: 80%;
-  height: 40px;
-  background-color: #fbebf0;
-  border-radius: 10px;
-  transition: transform 0.2s, background-color 0.2s;
-}
-
-.button:hover {
-  background-color: #f5d1dc;
-  cursor: pointer;
-  transform: scale(1.05);
-}
-
-.button:active {
-  background-color: #e8b9c5;
-  transform: scale(0.95);
+  padding: 2rem 0 2rem 0;
 }
 
 .countReviews {
@@ -114,6 +47,12 @@
 
 .description {
   display: flex;
+  color: #575757;
+}
+
+.description:hover {
+  color: #3a3aab;
+  text-decoration: underline;
 }
 
 .fullCardReview {

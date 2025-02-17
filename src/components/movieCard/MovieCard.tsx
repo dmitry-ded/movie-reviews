@@ -1,8 +1,8 @@
 import styles from "./movieCard.module.css"
-import icon from "../../assets/react.svg"
 import { IFilm } from "../../models/IFilm"
 import { Link } from "react-router-dom";
 import starImg from "../../assets/star.svg"
+import img5 from "../../assets/5.jpg"
 
 interface FilmItemProps {
   film: IFilm,
@@ -10,28 +10,30 @@ interface FilmItemProps {
 
 const MovieCard: React.FC<FilmItemProps> = ( { film } ) => {
   
-
-  console.log(film.reviews.length);
-  
-
   return (
     <div className={styles.movieCard}>
-      <img src={icon} alt="" className={styles.image} />
+      <div className={styles.imgBlock}>
+        <Link to={`/product/${film.id}`} style={{color: "black"}}>
+          <img src={img5} alt="" className={styles.image} />
+        </Link>
+      </div>
       <div className={styles.descriptionAndReviews}>
         <div className={styles.descriptionMovie}>
-          <Link to={`/product/${film.id}`} style={{color: "black"}}>
-            <h2>{`${film.title} (${film.date})`}</h2>
+          <Link to={`/product/${film.id}`}>
+            <h2 className={styles.titleMovie} >{`${film.title} (${film.date})`}</h2>
           </Link>
-          <Link to={`/postReview`} style={{color: "black"}}>
-            <span style={{fontWeight: "550"}}>Добавить отзыв <strong>{">"}</strong></span>
+          <Link to={`/postreview/${film.id}`} style={{color: "black"}}>
+            <span className={styles.addReview}>Добавить отзыв <strong>{">"}</strong></span>
           </Link>
         </div>
         <div className={styles.countReviews}>
           <div className={styles.icons}>
             <img src={starImg} alt="" />
-            <span>{film.rating}</span>
+            <span className={styles.rating}>{film.rating}</span>
           </div>
-          <span>Отзывы: {film.reviews.length}</span>
+          <Link to={`/product/${film.id}`} style={{color: "black"}}>
+            <span className={styles.reviewsCou}>Отзывы: {film.reviews.length}</span>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,0 +1,112 @@
+.mainMovieDescription {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  width: 100%;
+}
+
+.bodyMovieDescription {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+}
+
+.headerMovie {
+  display: flex;
+  padding: 2rem 0 2rem 0;
+}
+
+.fullCard {
+  display: flex;
+  padding: 0 0 2rem 0;
+  width: 100%;
+}
+
+.countReviews {
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.review {
+  color: #575757;
+}
+
+.review:hover {
+  color: #3a3aab;
+  text-decoration: underline;
+}
+
+.count {
+  margin-left: 5px;
+  background-color: #e8b9c5;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.description {
+  display: flex;
+  font-weight: 800;
+  color: #000;
+}
+
+.movieInfo {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 3rem;
+  gap: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th {
+      text-align: left;
+      font-weight: bold;
+      padding-bottom: 10px;
+  }
+
+  td {
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+      color: #575757;
+  }
+
+  td:first-child {
+      color: gray;
+  }
+
+  td:last-child {
+      font-weight: bold;
+  }
+
+}
+
+.titleBlock {
+  h4 {
+    font-weight: 800;
+  }
+}
+
+.textBlock {
+  line-height: 150%;
+  color: #575757;
+  word-wrap: break-word;
+  border-collapse: collapse;
+}

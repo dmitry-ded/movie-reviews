@@ -2,15 +2,26 @@ import React from 'react'
 import styles from "./reviewsCard.module.css"
 import { Reviews } from '../../models/IFilm'
 import icon from "../../assets/avatar.jpg"
+import { useDeletePostReviewMutation } from '../../services/FilmService';
 
 interface reviewCardProps {
   review: Reviews;
 }
 
 const ReviewsCard: React.FC<reviewCardProps> = ( { review } ) => {
-
-  console.log(review);
   
+  const [deletePost, {}] = useDeletePostReviewMutation();
+
+  const handleDelete = async (post: Reviews) => {
+    console.log(post);
+
+    try {
+      await deletePost(post)
+    } catch (error) {
+      console.error("Ошибка при удалении поста:", error);
+    }
+  }
+
   return (
     <div className={styles.reviewCard}>
       <div className={styles.reviewHeader}>
@@ -33,6 +44,9 @@ const ReviewsCard: React.FC<reviewCardProps> = ( { review } ) => {
         </p>
         <p><strong>Достоинства:</strong> <strong style={{fontSize: "17px", fontWeight: "400"}}>{review.reviewPlus}</strong></p>
         <p><strong>Недостатки:</strong> <strong style={{fontSize: "17px", fontWeight: "400"}}>{review.reviewMinus}</strong></p>
+      </div>
+      <div className={styles.deletePostBlock}>
+        <button className={styles.deletePost} onClick={() => handleDelete(review)}>Удалить</button>
       </div>
     </div>
   )
